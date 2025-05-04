@@ -1,0 +1,226 @@
+command_id: 7E0.015E
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: 7E804415E0000
+  expected_values:
+    FUEL_RATE: 0
+- response: 7E804415E0005
+  expected_values:
+    FUEL_RATE: 0.25
+- response: 7E804415E000B
+  expected_values:
+    FUEL_RATE: 0.55
+- response: 7E804415E0011
+  expected_values:
+    FUEL_RATE: 0.85
+- response: 7E804415E0017
+  expected_values:
+    FUEL_RATE: 1.15
+- response: 7E804415E0022
+  expected_values:
+    FUEL_RATE: 1.7
+- response: 7E804415E0028
+  expected_values:
+    FUEL_RATE: 2
+- response: 7E804415E002E
+  expected_values:
+    FUEL_RATE: 2.3
+- response: 7E804415E0033
+  expected_values:
+    FUEL_RATE: 2.55
+- response: 7E804415E0039
+  expected_values:
+    FUEL_RATE: 2.85
+- response: 7E804415E003F
+  expected_values:
+    FUEL_RATE: 3.15
+- response: 7E804415E0045
+  expected_values:
+    FUEL_RATE: 3.45
+- response: 7E804415E004A
+  expected_values:
+    FUEL_RATE: 3.7
+- response: 7E804415E0050
+  expected_values:
+    FUEL_RATE: 4
+- response: 7E804415E0056
+  expected_values:
+    FUEL_RATE: 4.3
+- response: 7E804415E005C
+  expected_values:
+    FUEL_RATE: 4.6
+- response: 7E804415E0061
+  expected_values:
+    FUEL_RATE: 4.85
+- response: 7E804415E0067
+  expected_values:
+    FUEL_RATE: 5.15
+- response: 7E804415E006D
+  expected_values:
+    FUEL_RATE: 5.45
+- response: 7E804415E0073
+  expected_values:
+    FUEL_RATE: 5.75
+- response: 7E804415E0078
+  expected_values:
+    FUEL_RATE: 6
+- response: 7E804415E007E
+  expected_values:
+    FUEL_RATE: 6.3
+- response: 7E804415E0084
+  expected_values:
+    FUEL_RATE: 6.6
+- response: 7E804415E008A
+  expected_values:
+    FUEL_RATE: 6.9
+- response: 7E804415E008F
+  expected_values:
+    FUEL_RATE: 7.15
+- response: 7E804415E0095
+  expected_values:
+    FUEL_RATE: 7.45
+- response: 7E804415E009B
+  expected_values:
+    FUEL_RATE: 7.75
+- response: 7E804415E00A1
+  expected_values:
+    FUEL_RATE: 8.05
+- response: 7E804415E00A7
+  expected_values:
+    FUEL_RATE: 8.35
+- response: 7E804415E00AC
+  expected_values:
+    FUEL_RATE: 8.6
+- response: 7E804415E00B2
+  expected_values:
+    FUEL_RATE: 8.9
+- response: 7E804415E00B8
+  expected_values:
+    FUEL_RATE: 9.2
+- response: 7E804415E00BE
+  expected_values:
+    FUEL_RATE: 9.5
+- response: 7E804415E00C9
+  expected_values:
+    FUEL_RATE: 10.05
+- response: 7E804415E00CF
+  expected_values:
+    FUEL_RATE: 10.35
+- response: 7E804415E00D5
+  expected_values:
+    FUEL_RATE: 10.65
+- response: 7E804415E00DA
+  expected_values:
+    FUEL_RATE: 10.9
+- response: 7E804415E00E0
+  expected_values:
+    FUEL_RATE: 11.2
+- response: 7E804415E00E6
+  expected_values:
+    FUEL_RATE: 11.5
+- response: 7E804415E00EC
+  expected_values:
+    FUEL_RATE: 11.8
+- response: 7E804415E00F1
+  expected_values:
+    FUEL_RATE: 12.05
+- response: 7E804415E00F7
+  expected_values:
+    FUEL_RATE: 12.35
+- response: 7E804415E00FD
+  expected_values:
+    FUEL_RATE: 12.65
+- response: 7E804415E0103
+  expected_values:
+    FUEL_RATE: 12.95
+- response: 7E804415E0108
+  expected_values:
+    FUEL_RATE: 13.2
+- response: 7E804415E010E
+  expected_values:
+    FUEL_RATE: 13.5
+- response: 7E804415E0114
+  expected_values:
+    FUEL_RATE: 13.8
+- response: 7E804415E011A
+  expected_values:
+    FUEL_RATE: 14.1
+- response: 7E804415E011F
+  expected_values:
+    FUEL_RATE: 14.35
+- response: 7E804415E0125
+  expected_values:
+    FUEL_RATE: 14.65
+- response: 7E804415E012B
+  expected_values:
+    FUEL_RATE: 14.95
+- response: 7E804415E0131
+  expected_values:
+    FUEL_RATE: 15.25
+- response: 7E804415E0137
+  expected_values:
+    FUEL_RATE: 15.55
+- response: 7E804415E013C
+  expected_values:
+    FUEL_RATE: 15.8
+- response: 7E804415E0142
+  expected_values:
+    FUEL_RATE: 16.1
+- response: 7E804415E014E
+  expected_values:
+    FUEL_RATE: 16.7
+- response: 7E804415E0153
+  expected_values:
+    FUEL_RATE: 16.95
+- response: 7E804415E0159
+  expected_values:
+    FUEL_RATE: 17.25
+- response: 7E804415E015F
+  expected_values:
+    FUEL_RATE: 17.55
+- response: 7E804415E0165
+  expected_values:
+    FUEL_RATE: 17.85
+- response: 7E804415E016A
+  expected_values:
+    FUEL_RATE: 18.1
+- response: 7E804415E0170
+  expected_values:
+    FUEL_RATE: 18.4
+- response: 7E804415E017C
+  expected_values:
+    FUEL_RATE: 19
+- response: 7E804415E0181
+  expected_values:
+    FUEL_RATE: 19.25
+- response: 7E804415E0198
+  expected_values:
+    FUEL_RATE: 20.4
+- response: 7E804415E01CC
+  expected_values:
+    FUEL_RATE: 23
+- response: 7E804415E0211
+  expected_values:
+    FUEL_RATE: 26.45
+- response: 7E804415E021D
+  expected_values:
+    FUEL_RATE: 27.05
+- response: 7E804415E0223
+  expected_values:
+    FUEL_RATE: 27.35
+- response: 7E804415E0234
+  expected_values:
+    FUEL_RATE: 28.2
+- response: 7E804415E023F
+  expected_values:
+    FUEL_RATE: 28.75
+- response: 7E804415E0296
+  expected_values:
+    FUEL_RATE: 33.1
+- response: 7E804415E02B8
+  expected_values:
+    FUEL_RATE: 34.8
+- response: 7E804415E0365
+  expected_values:
+    FUEL_RATE: 43.45

@@ -1,0 +1,151 @@
+command_id: 7E0.010E
+can_id_format: ELEVEN_BIT
+extended_addressing_enabled: false
+test_cases:
+- response: 7E803410E5A
+  expected_values:
+    SPARKADV: -19
+- response: 7E803410E5C
+  expected_values:
+    SPARKADV: -18
+- response: 7E803410E66
+  expected_values:
+    SPARKADV: -13
+- response: 7E803410E6C
+  expected_values:
+    SPARKADV: -10
+- response: 7E803410E6E
+  expected_values:
+    SPARKADV: -9
+- response: 7E803410E6F
+  expected_values:
+    SPARKADV: -8.5
+- response: 7E803410E72
+  expected_values:
+    SPARKADV: -7
+- response: 7E803410E77
+  expected_values:
+    SPARKADV: -4.5
+- response: 7E803410E7D
+  expected_values:
+    SPARKADV: -1.5
+- response: 7E803410E7E
+  expected_values:
+    SPARKADV: -1
+- response: 7E803410E80
+  expected_values:
+    SPARKADV: 0
+- response: 7E803410E81
+  expected_values:
+    SPARKADV: 0.5
+- response: 7E803410E83
+  expected_values:
+    SPARKADV: 1.5
+- response: 7E803410E84
+  expected_values:
+    SPARKADV: 2
+- response: 7E803410E86
+  expected_values:
+    SPARKADV: 3
+- response: 7E803410E87
+  expected_values:
+    SPARKADV: 3.5
+- response: 7E803410E89
+  expected_values:
+    SPARKADV: 4.5
+- response: 7E803410E8A
+  expected_values:
+    SPARKADV: 5
+- response: 7E803410E8C
+  expected_values:
+    SPARKADV: 6
+- response: 7E803410E8D
+  expected_values:
+    SPARKADV: 6.5
+- response: 7E803410E8F
+  expected_values:
+    SPARKADV: 7.5
+- response: 7E803410E90
+  expected_values:
+    SPARKADV: 8
+- response: 7E803410E92
+  expected_values:
+    SPARKADV: 9
+- response: 7E803410E93
+  expected_values:
+    SPARKADV: 9.5
+- response: 7E803410E95
+  expected_values:
+    SPARKADV: 10.5
+- response: 7E803410E96
+  expected_values:
+    SPARKADV: 11
+- response: 7E803410E98
+  expected_values:
+    SPARKADV: 12
+- response: 7E803410E99
+  expected_values:
+    SPARKADV: 12.5
+- response: 7E803410E9B
+  expected_values:
+    SPARKADV: 13.5
+- response: 7E803410E9C
+  expected_values:
+    SPARKADV: 14
+- response: 7E803410E9E
+  expected_values:
+    SPARKADV: 15
+- response: 7E803410E9F
+  expected_values:
+    SPARKADV: 15.5
+- response: 7E803410EA1
+  expected_values:
+    SPARKADV: 16.5
+- response: 7E803410EA2
+  expected_values:
+    SPARKADV: 17
+- response: 7E803410EA4
+  expected_values:
+    SPARKADV: 18
+- response: 7E803410EA5
+  expected_values:
+    SPARKADV: 18.5
+- response: 7E803410EA7
+  expected_values:
+    SPARKADV: 19.5
+- response: 7E803410EAA
+  expected_values:
+    SPARKADV: 21
+- response: 7E803410EAB
+  expected_values:
+    SPARKADV: 21.5
+- response: 7E803410EAD
+  expected_values:
+    SPARKADV: 22.5
+- response: 7E803410EAE
+  expected_values:
+    SPARKADV: 23
+- response: 7E803410EB0
+  expected_values:
+    SPARKADV: 24
+- response: 7E803410EB1
+  expected_values:
+    SPARKADV: 24.5
+- response: 7E803410EB3
+  expected_values:
+    SPARKADV: 25.5
+- response: 7E803410EB4
+  expected_values:
+    SPARKADV: 26
+- response: 7E803410EB6
+  expected_values:
+    SPARKADV: 27
+- response: 7E803410EB7
+  expected_values:
+    SPARKADV: 27.5
+- response: 7E803410EB9
+  expected_values:
+    SPARKADV: 28.5
+- response: 7E803410EC3
+  expected_values:
+    SPARKADV: 33.5
