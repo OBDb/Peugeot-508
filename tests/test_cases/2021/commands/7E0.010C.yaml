@@ -5,3 +5,8 @@ test_cases:
   response: |-
     7E804410C0000
     7E904410C0000
+- expected_values:
+    RPM: 825
+  response: |-
+    7E804410C0D06
+    7E904410C0CE4
