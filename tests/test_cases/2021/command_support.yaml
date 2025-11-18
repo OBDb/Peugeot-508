@@ -97,6 +97,7 @@ supported_commands_by_ecu:
   - 0142:VPWR
   - 7E5.7ED.0105
   - 7E5.7ED.010D
+  - 7E5.7ED.0131
 unsupported_commands_by_ecu:
   "6B4":
   - 6B4.694.22D410:PEUGEOT_HVBAT_SOC
@@ -134,7 +135,6 @@ unsupported_commands_by_ecu:
   - 7E5.7ED.011F
   - 7E5.7ED.0121
   - 7E5.7ED.0130
-  - 7E5.7ED.0131
   - 7E5.7ED.0141
   - 7E5.7ED.0142
   "7F1":
