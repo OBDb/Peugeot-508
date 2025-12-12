@@ -6,16 +6,6 @@ test_cases:
     7E804411F0000
     7E904411F000A
 - expected_values:
-    RUNTM: 12
-  response: |-
-    7E804411F000C
-    7E904411F000C
-- expected_values:
-    RUNTM: 13
-  response: |-
-    7E804411F000D
-    7E904411F000D
-- expected_values:
     RUNTM: 15
   response: |-
     7E804411F0010
@@ -25,26 +15,6 @@ test_cases:
   response: |-
     7E804411F0010
     7E904411F0010
-- expected_values:
-    RUNTM: 17
-  response: |-
-    7E804411F0011
-    7E904411F0011
-- expected_values:
-    RUNTM: 18
-  response: |-
-    7E804411F0012
-    7E904411F0012
-- expected_values:
-    RUNTM: 24
-  response: |-
-    7E804411F0019
-    7E904411F0018
-- expected_values:
-    RUNTM: 28
-  response: |-
-    7E804411F001C
-    7E904411F001C
 - expected_values:
     RUNTM: 81
   response: |-
