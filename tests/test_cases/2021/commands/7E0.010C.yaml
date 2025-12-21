@@ -16,6 +16,11 @@ test_cases:
     7E804410C1530
     7E904410C1500
 - expected_values:
+    RPM: 1403
+  response: |-
+    7E804410C15AE
+    7E904410C15EC
+- expected_values:
     RPM: 1393
   response: |-
     7E804410C15DE

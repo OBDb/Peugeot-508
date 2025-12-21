@@ -5,3 +5,8 @@ test_cases:
   response: |-
     7E803410452
     7E903410451
+- expected_values:
+    LOAD_PCT: 45.09804
+  response: |-
+    7E803410473
+    7E903410473
