@@ -139,6 +139,7 @@ unsupported_commands_by_ecu:
   - 7E0.014E:CLR_TIME
   "7E1":
   - 7E1.7E9.0101
+  - 7E1.7E9.0111
   - 7E1.7E9.0121
   - 7E1.7E9.0130
   - 7E1.7E9.0141
