@@ -30,3 +30,8 @@ test_cases:
   response: |-
     7E804410C15DE
     7E904410C15C4
+- expected_values:
+    RPM: 1454
+  response: |-
+    7E804410C16B4
+    7E904410C16B8
