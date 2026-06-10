@@ -16,10 +16,10 @@ test_cases:
     7E804411F0010
     7E904411F0010
 - expected_values:
-    RUNTM: 93
+    RUNTM: 137
   response: |-
-    7E804411F005E
-    7E904411F005D
+    7E804411F0089
+    7E904411F0089
 - expected_values:
     RUNTM: 1821
   response: |-
