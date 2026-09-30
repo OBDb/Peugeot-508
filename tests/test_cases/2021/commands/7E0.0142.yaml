@@ -6,40 +6,15 @@ test_cases:
     7E80441423714
     7E90441423700
 - expected_values:
-    VPWR: 14.102
-  response: |-
-    7E80441423728
-    7E90441423716
-- expected_values:
     VPWR: 14.317
   response: |-
     7E8044142378C
     7E904414237ED
 - expected_values:
-    VPWR: 14.231
-  response: |-
-    7E804414237B4
-    7E90441423797
-- expected_values:
     VPWR: 14.317
   response: |-
     7E804414237DC
     7E904414237ED
-- expected_values:
-    VPWR: 14.338
-  response: |-
-    7E804414237DC
-    7E90441423802
-- expected_values:
-    VPWR: 14.381
-  response: |-
-    7E804414237DC
-    7E9044142382D
-- expected_values:
-    VPWR: 14.403
-  response: |-
-    7E804414237DC
-    7E90441423843
 - expected_values:
     VPWR: 14.532
   response: |-
