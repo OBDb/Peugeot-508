@@ -1,4 +1,1429 @@
 { "commands": [
-
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D400"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Engine RPM", "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D402"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VSS_6A8", "path": "Movement", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D404"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CLU_PEDAL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Clutch pedal"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 1,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_SIG_1_V", "path": "Battery", "fmt": { "len": 16, "max": 6.55, "min": -6.55, "div": 5000.0001263106, "sign": true, "unit": "volts" }, "name": "Accelerator pedal signal 1 voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D406"}, "freq": 1,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_SIG_2_V", "path": "Battery", "fmt": { "len": 16, "max": 6.55, "min": -6.55, "div": 5000.0001263106, "sign": true, "unit": "volts" }, "name": "Accelerator pedal signal 2 voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_POS_RECALCULATED", "path": "Movement", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "percent" }, "name": "Accelerator pedal position, recalculated"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D409"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CALC_GEAR_GEARBOX", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Calculated gear in gearbox"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D40A"}, "freq": 5,
+  "signals": [
+    {"id": "508_ECT_CORRECTED", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Coolant temperature, corrected"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D40D"}, "freq": 5,
+  "signals": [
+    {"id": "508_ECT_TGT", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Coolant temperature target"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D411"}, "freq": 5,
+  "signals": [
+    {"id": "508_BOOST_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Boost air temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D412"}, "freq": 1,
+  "signals": [
+    {"id": "508_STAT_INTERNAL_IGN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Status of internal ignition motor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D414"}, "freq": 5,
+  "signals": [
+    {"id": "508_AAT_6A8", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Outside air temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D415"}, "freq": 5,
+  "signals": [
+    {"id": "508_ECT_6A8", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D416"}, "freq": 1,
+  "signals": [
+    {"id": "508_ADDITIONAL_HEATER_1", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Additional heater control 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D417"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUXILIARY_HEATER_2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Auxiliary heater 2 control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D418"}, "freq": 1,
+  "signals": [
+    {"id": "508_CAM_CRANK_POS", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Camshaft/crankshaft position synchronization"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41A"}, "freq": 1,
+  "signals": [
+    {"id": "508_START_PERMISSION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start permission from gearbox computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41C"}, "freq": 1,
+  "signals": [
+    {"id": "508_AC_COMP_CURRENT", "path": "Engine", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "scalar" }, "name": "Air conditioning compressor current"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41E"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_OIL_LEVEL_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 6553, "min": -6553, "div": 5, "sign": true, "unit": "millivolts" }, "name": "Engine oil level sensor voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41F"}, "freq": 1,
+  "signals": [
+    {"id": "508_FUEL_P", "path": "Fuel", "fmt": { "len": 16, "max": 32.76, "min": -32.76, "div": 999.9999525026, "sign": true, "unit": "bars" }, "name": "Fuel pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D421"}, "freq": 1,
+  "signals": [
+    {"id": "508_AC_P", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Air conditioning pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D422"}, "freq": 5,
+  "signals": [
+    {"id": "508_ENG_CTRL_COMPUTER_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "volts" }, "name": "Engine control computer supply voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D423"}, "freq": 1,
+  "signals": [
+    {"id": "508_5V_POWER_SUP_ST_1", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D424"}, "freq": 1,
+  "signals": [
+    {"id": "508_5V_POWER_SUP_ST_2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 2"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D425"}, "freq": 1,
+  "signals": [
+    {"id": "508_5V_POWER_SUP_ST_3", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 3"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D426"}, "freq": 1,
+  "signals": [
+    {"id": "508_5V_POWER_SUP_ST_4", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 4"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D429"}, "freq": 1,
+  "signals": [
+    {"id": "508_OIL_P", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Oil pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D42A"}, "freq": 5,
+  "signals": [
+    {"id": "508_FUEL_T", "path": "Fuel", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.14, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D42F"}, "freq": 1,
+  "signals": [
+    {"id": "508_GMV_ELEC_COOLING_FAN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Electric cooling fan control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D435"}, "freq": 5,
+  "signals": [
+    {"id": "508_COMPUTER_T", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Computer temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D438"}, "freq": 1,
+  "signals": [
+    {"id": "508_NEUTRAL_POS_SENS", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Neutral position sensor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D43B"}, "freq": 1,
+  "signals": [
+    {"id": "508_OIL_P_REGULATION", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "percent" }, "name": "Oil pressure regulation control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43C"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_REVERSE_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Reverse gear contactor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43D"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ENGAGED_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engaged gear"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43E"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_GEAR_PROCESS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear in the process of engaging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43F"}, "freq": 1,
+  "signals": [
+    {"id": "508_MILEAGE_SINCE_OIL", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Mileage since last oil change"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D445"}, "freq": 1,
+  "signals": [
+    {"id": "508_DES_HIGH_P_COMMON_P", "path": "Fuel", "fmt": { "len": 16, "max": 65535, "unit": "bars" }, "name": "Desired high pressure common rail fuel pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D446"}, "freq": 1,
+  "signals": [
+    {"id": "508_HIGH_FUEL_P_MEAS", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "bars" }, "name": "High fuel pressure measured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D460"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_METERING_VLV_TGT", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve, target position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D461"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_METERING_VLV", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D462"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CRANK_SPD", "path": "Movement", "fmt": { "len": 16, "max": 32767, "div": 2, "unit": "rpm" }, "name": "Crankshaft speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D463"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_BRAKE_SYSTEM_BACKUP", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake system backup contactor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D464"}, "freq": 1,
+  "signals": [
+    {"id": "508_OIL_P_REFERENCE", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Oil pressure reference value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D465"}, "freq": 1,
+  "signals": [
+    {"id": "508_ATMOSPHERIC_P", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Atmospheric pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D467"}, "freq": 1,
+  "signals": [
+    {"id": "508_SERVICE_BAT_CHG_STAT", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Service battery charge status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D469"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CLU_PEDAL_POS", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Clutch pedal position value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D472"}, "freq": 1,
+  "signals": [
+    {"id": "508_LOW_P_FUEL_PMP", "path": "Fuel", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Low pressure fuel pump actuator duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D474"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ABS_EKS_PROCESS_ADJ", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Anti-lock brake or stability control regulating"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D475"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CRUISE_CTRL_SET_SPD", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control set speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D476"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VSS_LIMITER_SET_SPD", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed limiter set speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D477"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_STOP_TIME", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "seconds" }, "name": "Engine stop time"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D478"}, "freq": 1,
+  "signals": [
+    {"id": "508_STARTER_DUTY", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "seconds" }, "name": "Starter duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D47B"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_TGT_POS", "path": "Battery", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Turbocharger, target position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D47D"}, "freq": 5,
+  "signals": [
+    {"id": "508_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D489"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_FLOW", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Air flow"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48A"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_CTRL", "path": "Battery", "fmt": { "len": 16, "max": 127, "min": -128, "div": 256, "sign": true, "unit": "percent" }, "name": "Turbocharger control duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48C"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_FIRST", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Turbocharger first electronic boost"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48E"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_FLOW_TGT", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Air flow target"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D491"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_POS_1", "path": "Movement", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Accelerator pedal position, track 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D492"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_POS_2", "path": "Movement", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Accelerator pedal position, track 2"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D496"}, "freq": 5,
+  "signals": [
+    {"id": "508_SERVICE_BAT_T_6A8", "path": "Battery", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Service battery temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D497"}, "freq": 1,
+  "signals": [
+    {"id": "508_BAT_CURRENT", "path": "Battery", "fmt": { "len": 32, "max": 2097151, "min": -2097152, "div": 1024, "sign": true, "unit": "amps" }, "name": "Battery current"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D498"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MAX_CLU_TRAVEL", "path": "Transmission", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Maximum clutch travel during gear shift"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D499"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CRANK_SPD_DETERMINED", "path": "Movement", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "rpm" }, "name": "Crankshaft speed determined by camshaft sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D49C"}, "freq": 1,
+  "signals": [
+    {"id": "508_ODO_6A8", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Total mileage", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A0"}, "freq": 1,
+  "signals": [
+    {"id": "508_CONTROLLED_AIR_SUP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Controlled air supply module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A5"}, "freq": 1,
+  "signals": [
+    {"id": "508_ALTERNATOR_LOAD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Alternator load value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4AA"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_SET_SPD_ELEC_COOLING", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Set speed of electric cooling fan"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4AF"}, "freq": 1,
+  "signals": [
+    {"id": "508_AC", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Air conditioning"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4B0"}, "freq": 1,
+  "signals": [
+    {"id": "508_CRUISE_CTRL_RW_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Cruise control, RW status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4BA"}, "freq": 1,
+  "signals": [
+    {"id": "508_POWERTRAIN_COND", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Powertrain condition"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4C0"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VSS_LIMITER_STAT_LW", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vehicle speed limiter status, LW"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4C3"}, "freq": 1,
+  "signals": [
+    {"id": "508_STARTER_ENGAGEMENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Starter engagement status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4CA"}, "freq": 1,
+  "signals": [
+    {"id": "508_DATE", "path": "Engine", "fmt": { "len": 32, "max": 429496729, "div": 10, "unit": "seconds" }, "name": "Date"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D2"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_INDICATED_ENG_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "newtonMeters" }, "name": "Indicated engine torque"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D4"}, "freq": 5,
+  "signals": [
+    {"id": "508_MIN_BAT_V_STARTUP", "path": "Battery", "fmt": { "len": 16, "max": 655, "min": -655, "div": 50.0000011176, "sign": true, "unit": "volts" }, "name": "Minimum battery voltage at startup"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D8"}, "freq": 3600,
+  "signals": [
+    {"id": "508_CNT_NUM_RE", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Computer restarts since memory erase"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D9"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_P_MEAS", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Turbocharger pressure measured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E2"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ESTIMATED_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "newtonMeters" }, "name": "Estimated torque of internal friction of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E3"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CORRESPONDING", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Torque corresponding to driver requirement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E4"}, "freq": 3600,
+  "signals": [
+    {"id": "508_CNT_OCCURRENCE", "path": "Tires", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Counter of occurrence of enhanced resonance of the twin flywheel of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E5"}, "freq": 3600,
+  "signals": [
+    {"id": "508_CNT_OCCURRENCE_RESONANCE", "path": "Tires", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Counter of occurrence of resonance of the twin flywheel of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EA"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_POS", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "percent" }, "name": "Turbocharger position information"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EB"}, "freq": 1,
+  "signals": [
+    {"id": "508_MOVEMENT_CONTROLLED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Movement of controlled air supply module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EC"}, "freq": 1,
+  "signals": [
+    {"id": "508_APPROXIMATE_POS", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "percent" }, "name": "Approximate position of turbocharger actuator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4ED"}, "freq": 1,
+  "signals": [
+    {"id": "508_LOW_P_FUEL_PMP_STAT", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Low pressure fuel pump status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D500"}, "freq": 1,
+  "signals": [
+    {"id": "508_INJ_CODE_1", "path": "Engine", "fmt": {"bix": 8,   "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 1"},
+    {"id": "508_INJ_CODE_2", "path": "Engine", "fmt": {"bix": 72,  "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 2"},
+    {"id": "508_INJ_CODE_3", "path": "Engine", "fmt": {"bix": 136, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 3"},
+    {"id": "508_INJ_CODE_4", "path": "Engine", "fmt": {"bix": 200, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 4"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D509"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50C"}, "freq": 1,
+  "signals": [
+    {"id": "508_PREHEATING_RELAY", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Preheating relay control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50D"}, "freq": 1,
+  "signals": [
+    {"id": "508_STAT_PRE_POST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Glow plug relay status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50E"}, "freq": 5,
+  "signals": [
+    {"id": "508_PREHEATING_V", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Glow plug unit supply voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50F"}, "freq": 5,
+  "signals": [
+    {"id": "508_PREHEATING_T", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "Glow plug plug set temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D510"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_VLV_SET_POS", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve set position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D511"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_VLV_CTRL_SIG_RCO", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D513"}, "freq": 1,
+  "signals": [
+    {"id": "508_VEH_MILEAGE", "path": "Engine", "fmt": { "len": 8, "max": 12750, "mul": 50, "unit": "kilometers" }, "name": "Vehicle mileage remaining before filling the tank with urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D514"}, "freq": 1,
+  "signals": [
+    {"id": "508_P_BASED_INJ", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Pressure-based injection permission for urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D515"}, "freq": 5,
+  "signals": [
+    {"id": "508_UREA_SOLUTION_INJ_ON_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Urea solution injection permission based on temperature value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D517"}, "freq": 1,
+  "signals": [
+    {"id": "508_REMAINING_UREA", "path": "Engine", "fmt": { "len": 16, "max": 63999, "mul": 125, "div": 128, "unit": "unknown" }, "name": "Remaining urea solution in the urea tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D518"}, "freq": 1,
+  "signals": [
+    {"id": "508_DPF_DIFF_P_SENS_SIG", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Diesel particulate filter differential pressure sensor signal deviation from reference value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D519"}, "freq": 30,
+  "signals": [
+    {"id": "508_DIST_TRAVELED_SINCE", "path": "Trips", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Distance traveled since the last regeneration"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D51E"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_TANK_HEATING_CURRENT", "path": "Engine", "fmt": { "len": 16, "max": 399, "div": 163.8399875, "unit": "percent" }, "name": "Urea tank heating current, percentage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D51F"}, "freq": 1,
+  "signals": [
+    {"id": "508_EVALUATION_DEGREE", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Evaluation of the degree of dilution of motor oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D520"}, "freq": 1,
+  "signals": [
+    {"id": "508_PF_DIFF_P", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Particulate filter differential pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D521"}, "freq": 1,
+  "signals": [
+    {"id": "508_DPF_REGEN_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Diesel particulate filter regeneration status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D523"}, "freq": 1,
+  "signals": [
+    {"id": "508_EVALUATION_CARBON", "path": "Engine", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "percent" }, "name": "Evaluation of carbon content in engine oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D524"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_OIL_DILUTION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine oil dilution protection status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D525"}, "freq": 1,
+  "signals": [
+    {"id": "508_AVG_MILEAGE_LAST_10", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Average mileage for the last 10 regenerations"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D526"}, "freq": 1,
+  "signals": [
+    {"id": "508_TOT_MASS_ADDITIVE", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 511, "div": 128, "unit": "gravity" }, "name": "Total mass of additive accumulated in the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D527"}, "freq": 1,
+  "signals": [
+    {"id": "508_TOT_MASS_ADDITIVE_ACCUMULATED_DPF", "path": "Engine", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "gravity" }, "name": "Total mass of additive accumulated in the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D528"}, "freq": 1,
+  "signals": [
+    {"id": "508_REGEN_ENABLE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Regeneration enable"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52C"}, "freq": 1,
+  "signals": [
+    {"id": "508_WATER_DIESEL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Water in diesel"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52E"}, "freq": 5,
+  "signals": [
+    {"id": "508_EXH_GAS_T_BEFORE_PRE", "path": "Transmission", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature before upstream catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52F"}, "freq": 1,
+  "signals": [
+    {"id": "508_SOOT_CLOGGING_LEVEL", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 6399, "div": 10.24, "unit": "percent" }, "name": "Soot clogging level of diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D530"}, "freq": 1,
+  "signals": [
+    {"id": "508_MILEAGE_REMAINING", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 524272, "min": -524288, "mul": 16, "sign": true, "unit": "kilometers" }, "name": "Mileage remaining before diesel particulate filter replacement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D531"}, "freq": 1,
+  "signals": [
+    {"id": "508_MILEAGE_SINCE_DPF", "path": "Engine", "fmt": { "len": 16, "max": 524280, "mul": 8, "unit": "kilometers" }, "name": "Mileage since last diesel particulate filter replacement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D532"}, "freq": 1,
+  "signals": [
+    {"id": "508_ASSESSMENT_THERMAL", "path": "Engine", "fmt": { "len": 16, "max": 12799, "mul": 25, "div": 128, "unit": "percent" }, "name": "Assessment of thermal aging of the particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D533"}, "freq": 1,
+  "signals": [
+    {"id": "508_EXH_GAS_FLOW_THROUGH", "path": "Engine", "fmt": { "len": 16, "max": 14399782, "mul": 219.7265930176, "unit": "liters" }, "name": "Exhaust gas flow through the particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D534"}, "freq": 1,
+  "signals": [
+    {"id": "508_VEH_MILEAGE_SINCE", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "kilometers" }, "name": "Vehicle mileage since the last oil change under severe vehicle operating conditions"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D536"}, "freq": 30,
+  "signals": [
+    {"id": "508_DIST_NEXT_OIL_CHANGE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance to next oil change"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53A"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_VLV_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation valve first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53B"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_DOSER_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Air doser first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53C"}, "freq": 1,
+  "signals": [
+    {"id": "508_POWER_SPENT_ON", "path": "Engine", "fmt": { "len": 16, "max": 399, "div": 163.8399875, "unit": "percent" }, "name": "Power spent on heating the urea injection system pipes, percentage ratio"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53D"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_CONTENT_AFTER", "path": "Transmission", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "scalar" }, "name": "Nitrogen oxide content after catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53E"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_SOLUTION_P", "path": "Engine", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "bars" }, "name": "Urea solution pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53F"}, "freq": 1,
+  "signals": [
+    {"id": "508_CALC_NOX_CONTENT", "path": "Transmission", "fmt": { "len": 32, "max": 4194303, "div": 1024, "unit": "unknown" }, "name": "Calculated nox content at the inlet of the nox catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D540"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_SYSTEM_OP_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox system operating status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D541"}, "freq": 1,
+  "signals": [
+    {"id": "508_EVALUATION_THERMAL", "path": "Transmission", "fmt": { "len": 16, "max": 99.99, "div": 655.35995, "unit": "percent" }, "name": "Evaluation of the thermal aging of the NOx catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D542"}, "freq": 1,
+  "signals": [
+    {"id": "508_EVALUATION_EXH_GAS", "path": "Engine", "fmt": { "len": 32, "max": 214748364700, "min": -214748364800, "mul": 100, "sign": true, "unit": "liters" }, "name": "Evaluation of the exhaust gas flow using the nox sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D543"}, "freq": 5,
+  "signals": [
+    {"id": "508_T_NOX_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "celsius" }, "name": "Temperature of the nox catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D544"}, "freq": 1,
+  "signals": [
+    {"id": "508_EXH_GAS_P_OUTLET_PF", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 32.76, "min": -32.76, "div": 999.9999525026, "sign": true, "unit": "bars" }, "name": "Exhaust gas pressure at the outlet of the particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D545"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_CONTENT_MEAS", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D546"}, "freq": 1,
+  "signals": [
+    {"id": "508_CYL_1_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 1 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D547"}, "freq": 1,
+  "signals": [
+    {"id": "508_CYL_2_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 2 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D548"}, "freq": 1,
+  "signals": [
+    {"id": "508_CYL_3_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 3 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D549"}, "freq": 1,
+  "signals": [
+    {"id": "508_CYL_4_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 4 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54A"}, "freq": 1,
+  "signals": [
+    {"id": "508_OPEN_LOOP_SOOT_LOAD", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 63.99, "div": 1024, "unit": "gramsPerLiter" }, "name": "Open loop soot load assessment of the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54B"}, "freq": 1,
+  "signals": [
+    {"id": "508_CLOSED_LOOP_SOOT", "path": "Engine", "fmt": { "len": 16, "max": 63.99, "div": 1024, "unit": "gramsPerLiter" }, "name": "Closed loop soot load assessment of the diesel particulate filter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54C"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHORT_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Short-term regeneration capability"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54D"}, "freq": 1,
+  "signals": [
+    {"id": "508_LONG_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Long-term regeneration capability"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54E"}, "freq": 5,
+  "signals": [
+    {"id": "508_AIR_T_AIR_FLOW_METER", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Air temperature by air flow meter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54F"}, "freq": 1,
+  "signals": [
+    {"id": "508_AIR_METERING_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D550"}, "freq": 1,
+  "signals": [
+    {"id": "508_SPEC_VOLUME_INJECTED", "path": "Engine", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "unknown" }, "name": "Specified volume of injected urea solution"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D552"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_LOW_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation low limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D553"}, "freq": 1,
+  "signals": [
+    {"id": "508_EGR_HIGH_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation high limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D554"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_SENS_HEATING", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor heating control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D555"}, "freq": 5,
+  "signals": [
+    {"id": "508_EXH_GAS_T_AFTER_PRE", "path": "Transmission", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature after upstream catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D556"}, "freq": 1,
+  "signals": [
+    {"id": "508_TURBOCHARGER_P", "path": "Battery", "fmt": { "len": 16, "blsb": true, "max": 65535, "unit": "unknown" }, "name": "Turbocharger pressure reference"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D557"}, "freq": 1,
+  "signals": [
+    {"id": "508_CAN_VEH_BE_EQUIPPED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Towing device configured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D558"}, "freq": 1,
+  "signals": [
+    {"id": "508_VOLUME_UREA_SOLUTION", "path": "Engine", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "liters" }, "name": "Volume of urea solution measured in urea tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D559"}, "freq": 1,
+  "signals": [
+    {"id": "508_PRE_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Upstream catalytic converter aging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D55B"}, "freq": 1,
+  "signals": [
+    {"id": "508_MIXTURE_ENRICHMENT_MEAS", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32768, "unit": "scalar" }, "name": "Mixture enrichment measured by nox sensor at outlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D55D"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 65.53, "div": 999.9999525026, "unit": "gravity" }, "name": "Nox catalytic converter urea content"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D563"}, "freq": 1,
+  "signals": [
+    {"id": "508_CALC_FUEL_INJ_AMOUNT", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Calculated fuel injection amount"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D568"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_SOLUTION", "path": "Engine", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "unknown" }, "name": "Urea solution injected amount"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56A"}, "freq": 30,
+  "signals": [
+    {"id": "508_MIN_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Minimum fuel level"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56B"}, "freq": 1,
+  "signals": [
+    {"id": "508_MASS_UREA_INJECTED", "path": "Engine", "fmt": { "len": 16, "max": 1310, "div": 50.0000011176, "unit": "gravity" }, "name": "Mass of urea injected for thermal protection of urea injector"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56C"}, "freq": 1,
+  "signals": [
+    {"id": "508_AMOUNT_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "unknown" }, "name": "Amount of fuel additive remaining in the additive tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56D"}, "freq": 5,
+  "signals": [
+    {"id": "508_T_UREA_SOLUTION_UREA", "path": "Engine", "fmt": { "len": 8, "max": 127, "min": -128, "sign": true, "unit": "celsius" }, "name": "Temperature of the urea solution in the urea tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56E"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_PROPORTIONAL_CLU", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Proportional clutch pedal sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56F"}, "freq": 1,
+  "signals": [
+    {"id": "508_FIRST_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "First fuel additive injection state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D570"}, "freq": 1,
+  "signals": [
+    {"id": "508_COMPOSITION_MIXTURE", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "The composition of the mixture is calculated by the oxygen sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D571"}, "freq": 1,
+  "signals": [
+    {"id": "508_MIXTURE_ENRICHMENT", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32768, "unit": "scalar" }, "name": "Mixture enrichment measured by nox sensor at inlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D572"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_SENS_SIG_STAT_INLET", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor signal status at the inlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D573"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_SENS_SIG_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Nox sensor signal status at the outlet"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D576"}, "freq": 1,
+  "signals": [
+    {"id": "508_NOX_CONTENT_MEAS_INLET_NOX", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D580"}, "freq": 1,
+  "signals": [
+    {"id": "508_POWER_CONSUMED", "path": "Engine", "fmt": { "len": 16, "max": 655350, "mul": 10, "unit": "percent" }, "name": "Power consumed for heating the pipelines of the urea injection system"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D581"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_TANK_HEATING", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "percent" }, "name": "Urea tank heating current"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D586"}, "freq": 1,
+  "signals": [
+    {"id": "508_REQ_CONTROLLED", "path": "Engine", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Requested value controlled thermostat"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D588"}, "freq": 1,
+  "signals": [
+    {"id": "508_INJ_ANG_HIGH_P_FUEL", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Injection angle of the high-pressure fuel pump"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D58C"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_MASS_FRACTION", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "percent" }, "name": "Urea mass fraction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D58D"}, "freq": 1,
+  "signals": [
+    {"id": "508_UREA_SOLUTION_TYPE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Urea solution type in urea tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D700"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VACUUM_PRESENT_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vacuum present in the brake system"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D703"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_STOP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by body control module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D704"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_STOP_ALLOWED", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by gearbox computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D705"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_AUTOMATIC_STOP_ALLOWED_POWER_STEER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by power steering computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D706"}, "freq": 1,
+  "signals": [
+    {"id": "508_STOP_ALLOWED_ESP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop allowed by ESP computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D707"}, "freq": 1,
+  "signals": [
+    {"id": "508_STOP_PERMITTED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop permitted by suspension computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D709"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_RESTART", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from engine management computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70A"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_RESTART_REQ_BSI", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from body control module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70B"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_RESTART_REQ", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from transmission computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70C"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_RESTART_REQ_SENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Restart request sent by power steering computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70D"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_RESTART_REQ_SENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine restart request sent by ESP computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70E"}, "freq": 1,
+  "signals": [
+    {"id": "508_RESTART_REQ_SENT_SUSPENSION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Restart request sent by suspension computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D712"}, "freq": 1,
+  "signals": [
+    {"id": "508_SET_V_REVERSIBLE_GEN", "path": "Battery", "fmt": { "len": 8, "max": 16.97, "div": 39.999999404, "add": 10.6000003815, "unit": "volts" }, "name": "Set voltage of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D713"}, "freq": 1,
+  "signals": [
+    {"id": "508_REVERSIBLE_GEN_V", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "Reversible generator voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D714"}, "freq": 1,
+  "signals": [
+    {"id": "508_GEN_MODE", "path": "Engine", "fmt": { "len": 8, "max": 19125, "mul": 75, "unit": "rpm" }, "name": "Generator mode"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D715"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_REVERSIBLE_GEN_TQ", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Reversible generator torque"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D716"}, "freq": 1,
+  "signals": [
+    {"id": "508_REVERSE_GEN_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Reverse generator status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71B"}, "freq": 3600,
+  "signals": [
+    {"id": "508_ENG_RESTART_CNT_STOP", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine restart counter by stop and start function"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71E"}, "freq": 1,
+  "signals": [
+    {"id": "508_START_OR_RESTART", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start or restart inhibition transmitted by engine management computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71F"}, "freq": 3600,
+  "signals": [
+    {"id": "508_STARTER_ACTIVATION", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Starter activation counter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D720"}, "freq": 1,
+  "signals": [
+    {"id": "508_V_TERMINALS_ENERGY", "path": "Battery", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "volts" }, "name": "Voltage at the terminals of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D721"}, "freq": 5,
+  "signals": [
+    {"id": "508_T_ENERGY_ACCUMULATOR", "path": "Engine", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Temperature of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D722"}, "freq": 1,
+  "signals": [
+    {"id": "508_STAT_ENERGY", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Status of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D723"}, "freq": 1,
+  "signals": [
+    {"id": "508_DRIVER_PRESENCE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Driver presence"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D724"}, "freq": 1,
+  "signals": [
+    {"id": "508_ECO_MODE_OFF_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Economy mode off state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D725"}, "freq": 1,
+  "signals": [
+    {"id": "508_STOP_START_FUNCTION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop and start function state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D726"}, "freq": 1,
+  "signals": [
+    {"id": "508_STOP_START_SWITCH", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop and start switch"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D728"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_SUPPLIED_OR_TAKEN", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Torque supplied or taken by generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72A"}, "freq": 1,
+  "signals": [
+    {"id": "508_STARTER_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Starter control interface unit operating status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72C"}, "freq": 1,
+  "signals": [
+    {"id": "508_V_MAINTAINER_STAT", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72D"}, "freq": 1,
+  "signals": [
+    {"id": "508_EVALUATION_TOT_RES_V", "path": "Battery", "fmt": { "len": 16, "max": 0.511, "div": 128040.9703220589, "unit": "scalar" }, "name": "Evaluation of the total resistance of the voltage maintaining device"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D730"}, "freq": 3600,
+  "signals": [
+    {"id": "508_T_ELECTRONIC_POWER_V", "path": "Battery", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Temperature of the electronic power unit of the voltage maintenance device"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D731"}, "freq": 1,
+  "signals": [
+    {"id": "508_PRESENCE_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Presence of the identifier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D732"}, "freq": 1,
+  "signals": [
+    {"id": "508_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Identifier of the electronic power circuit of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D733"}, "freq": 1,
+  "signals": [
+    {"id": "508_IDENTIFIER_SUPPLIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Identifier of the supplier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D734"}, "freq": 1,
+  "signals": [
+    {"id": "508_SET_V_ENERGY_STORAGE", "path": "Battery", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "volts" }, "name": "Set voltage of energy storage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D73B"}, "freq": 1,
+  "signals": [
+    {"id": "508_VACUUM_CIRCUIT", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Vacuum circuit vacuum"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D741"}, "freq": 1,
+  "signals": [
+    {"id": "508_SERVICE_BAT_WEAR", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service battery wear condition"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D742"}, "freq": 1,
+  "signals": [
+    {"id": "508_SERVICE_BAT_CHG_ST", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service battery charge state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D747"}, "freq": 1,
+  "signals": [
+    {"id": "508_V_MAINTAINER", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer computer restart permission"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D748"}, "freq": 1,
+  "signals": [
+    {"id": "508_V_MAINTAINER_COMPUTER_REQ", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer computer request sent"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D749"}, "freq": 1,
+  "signals": [
+    {"id": "508_STOP_PERMITTED_V", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop permitted by voltage maintainer computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74B"}, "freq": 1,
+  "signals": [
+    {"id": "508_SERVICE_NETWORK", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service network related engine restart request"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74C"}, "freq": 1,
+  "signals": [
+    {"id": "508_12V_NETWORK_ALLOWED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "12V network allowed stop"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74F"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENERGY_ACCUMULATOR", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator discharge permission state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D753"}, "freq": 1,
+  "signals": [
+    {"id": "508_DURING_GEN_LOAD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Value during generator load smooth increase"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D755"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENERGY_ACCUMULATOR_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator state transfer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D758"}, "freq": 5,
+  "signals": [
+    {"id": "508_ENERGY_ACCUMULATOR_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator temperature limiter state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D759"}, "freq": 3600,
+  "signals": [
+    {"id": "508_CENTRALIZED_V_T", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Centralized voltage maintenance device temperature limiter state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D75B"}, "freq": 1,
+  "signals": [
+    {"id": "508_GEN_SHUTDOWN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Generator shutdown"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D761"}, "freq": 1,
+  "signals": [
+    {"id": "508_RETURN_STARTER_ENG", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Return to starter engine restart control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D764"}, "freq": 1,
+  "signals": [
+    {"id": "508_RETURN_ENG_START", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Return to engine start and restart control by starter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D766"}, "freq": 1,
+  "signals": [
+    {"id": "508_SET_V_STORAGE_BAT", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Set voltage of storage battery charging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D767"}, "freq": 1,
+  "signals": [
+    {"id": "508_START_INHIBIT_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start inhibit control, wired"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D787"}, "freq": 1,
+  "signals": [
+    {"id": "508_EXPECTED_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected identifier of reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D788"}, "freq": 1,
+  "signals": [
+    {"id": "508_EXPECTED_IDENTIFIER_ELECTRONIC", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected identifier of electronic power circuit of reversible generator generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D789"}, "freq": 1,
+  "signals": [
+    {"id": "508_EXPECTED_GEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected generator supplier identifier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D78A"}, "freq": 5,
+  "signals": [
+    {"id": "508_SERVICE_BAT_V", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Service battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "DADC"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_CTRL_MODULE_STAT", "path": "Engine", "fmt": {           "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine control module status"},
+    {"id": "508_IMMOBILIZER_CODE",     "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "scalar" }, "name": "Immobilizer code programming status"},
+    {"id": "508_PROBLEMS_DETECTED",    "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 255, "unit": "scalar" }, "name": "Problems detected while transmitting unlock code"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "DADD"}, "freq": 1,
+  "signals": [
+    {"id": "508_LOCK_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Lock status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C3"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_POS", "path": "Movement", "fmt": {"bix": 88,  "len": 8, "max": 99.45,              "mul": 39, "div": 100,              "unit": "percent"      }, "name": "Accelerator pedal position"},
+    {"id": "508_ENG_TQ",          "path": "Engine",   "fmt": {"bix": 112, "len": 8, "max": 410,   "min": -100, "mul": 2,              "add": -100, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C5"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_RPM_6A9",        "path": "Movement", "fmt": {"bix": 40,  "len": 8, "max": 8160,              "mul": 32,                        "unit": "rpm"     }, "name": "Engine RPM",                     "suggestedMetric": "engineSpeed"},
+    {"id": "508_INPUT_SHFT_SPD", "path": "Movement", "fmt": {"bix": 48,  "len": 8, "max": 8160,              "mul": 32,                        "unit": "rpm"     }, "name": "Input shaft speed"},
+    {"id": "508_CMD_OIL_P",      "path": "Engine",   "fmt": {"bix": 128, "len": 8, "max": 25.5,                         "div": 10,             "unit": "bars"    }, "name": "Commanded oil pressure"},
+    {"id": "508_ACT_OIL_P",      "path": "Engine",   "fmt": {"bix": 144, "len": 8, "max": 12.75,                        "div": 20,             "unit": "bars"    }, "name": "Actual oil pressure"},
+    {"id": "508_ATF_T",          "path": "Engine",   "fmt": {"bix": 168, "len": 8, "max": 205,   "min": -50,                       "add": -50, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C8"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VSS", "path": "Movement", "fmt": {"bix": 96, "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_OIL", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Automatic transmission oil aging sensor"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D406"}, "freq": 3600,
+  "signals": [
+    {"id": "508_ENG_RESTART_CNT", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine restart counter"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D500"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_GEAR_SHIFT_LEVER_POS_ON", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear shift lever position displayed on instrument panel"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D501"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ENGAGED_GEAR_6A9", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engaged gear"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D502"}, "freq": 1,
+  "signals": [
+    {"id": "508_WINTER_MODE_SWITCH", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Winter mode switch state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D503"}, "freq": 1,
+  "signals": [
+    {"id": "508_SPORT_MODE_CONTACTOR", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Sport mode contactor state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D504"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CONV_STAT", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Torque converter status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D505"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_ACCEL_PEDAL_POS_6A9", "path": "Movement", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D506"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MAX_ALLOWABLE_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Maximum allowable torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D507"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_DRIVER_REQ_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Driver, requested torque value"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D508"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_TQ", "path": "Transmission", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Automatic transmission torque request"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D509"}, "freq": 1,
+  "signals": [
+    {"id": "508_DRAIN_TRANS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission oil drain"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D510"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission overheat indicator request"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D511"}, "freq": 1,
+  "signals": [
+    {"id": "508_REQ_TURN_ON_ENG", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Request to turn on the engine diagnostic indicator"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D512"}, "freq": 1,
+  "signals": [
+    {"id": "508_ASR_OR_ESP_SYSTEM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Traction or stability control regulating"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D513"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MAIN_BRAKE_CONTACTOR", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Main brake contactor status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D514"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_SECONDARY_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Secondary brake contactor status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D515"}, "freq": 1,
+  "signals": [
+    {"id": "508_COMPUTER_WAKE_UP_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Computer remote wake-up state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D516"}, "freq": 1,
+  "signals": [
+    {"id": "508_CHANGE_REPORT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "CHANGE REPORT IN PROGRESS"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D517"}, "freq": 1,
+  "signals": [
+    {"id": "508_BUTTON_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Button state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D51B"}, "freq": 1,
+  "signals": [
+    {"id": "508_START_PROHIBITION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start prohibition"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D520"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_GEAR_SHIFT_KNOB", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear shift knob under steering wheel"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D530"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_AVG_FRONT_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 2621, "div": 25.0000005588, "unit": "rpm" }, "name": "Average front wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D531"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_RL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D532"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_RR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D533"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_AVG_SPD_FRONT_WHEELS", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Average speed front wheels"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D550"}, "freq": 5,
+  "signals": [
+    {"id": "508_AUTOMATIC_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D551"}, "freq": 5,
+  "signals": [
+    {"id": "508_COMPUTER_POWER_SUP_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Computer power supply voltage"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D552"}, "freq": 5,
+  "signals": [
+    {"id": "508_AAT_6A9", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D553"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_OP_MODE", "path": "Engine", "fmt": { "len": 16, "max": 8191, "div": 8, "unit": "rpm" }, "name": "Engine operating mode"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D554"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_REAL_ENG_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Real engine torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D555"}, "freq": 5,
+  "signals": [
+    {"id": "508_ECT_6A9", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D604"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CONV_LOCK_UP_P", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Torque converter lock-up pressure variation solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D605"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CONV_LOCK_UP_P_VARIATION", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Torque converter lock-up pressure variation solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D606"}, "freq": 1,
+  "signals": [
+    {"id": "508_SLT_LINE_P_VARIATION", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Line pressure solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D607"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_LINE_P", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured line pressure variation solenoid valve current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D608"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_B1", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve for changing the pressure in the brake system B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D609"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_B1", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve for changing the pressure in the brake system B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60A"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CTRL_CURRENT", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve for changing the gear shift SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60B"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MEAS_CURRENT", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve for changing the gear shift SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60C"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHIFT_SOLENOID_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid control current SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60D"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHIFT_SOLENOID_MEAS", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid measured current SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60E"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHIFT_SOLENOID_CTRL_CURRENT_SC4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid control current SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60F"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHIFT_SOLENOID_MEAS_CURRENT_SC4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid measured current SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D610"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_C1", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the solenoid valve for changing the pressure of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D611"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_C1", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the solenoid valve for changing the pressure of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D612"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_C2", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the solenoid valve for changing the pressure of the clutch C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D613"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_C2", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the solenoid valve for changing the pressure of the clutch C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D614"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_C3", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve of change of pressure of clutch C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D615"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_C3", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve of change of pressure of clutch C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D616"}, "freq": 1,
+  "signals": [
+    {"id": "508_ACTIVATION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Activation of additional oil pump, ATN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D617"}, "freq": 1,
+  "signals": [
+    {"id": "508_ADDITIONAL_OIL_PMP", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Additional oil pump control status, atn8 transmission"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D618"}, "freq": 1,
+  "signals": [
+    {"id": "508_SC5_SHIFT_SOLENOID", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "SC5 shift solenoid control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D619"}, "freq": 1,
+  "signals": [
+    {"id": "508_SC5_SHIFT_SOLENOID_MEAS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "SC5 shift solenoid measured current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61A"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_LUBRICATION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission lubrication solenoid control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61B"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of control of electromagnetic valve of automatic transmission lubrication"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61C"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve of change of pressure of torque converter lock-up"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61D"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_CTRL_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of control of electromagnetic valve of change of pressure of torque converter lock-up"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61E"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_ELECTROMAGNETIC_VLV_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve of actuator of automatic transmission lock-up in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61F"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of the solenoid valve for controlling the locking finger of the automatic transmission in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D620"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_C4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve of change of pressure of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D621"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_C4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve of change of pressure of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D622"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_B2", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of electromagnetic valve for changing the pressure in the brake system B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D623"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_B2", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of electromagnetic valve for changing the pressure in the brake system B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D625"}, "freq": 1,
+  "signals": [
+    {"id": "508_CTRL_CURRENT_P_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve for regulating the pressure in the control system of the oil pressure accumulator, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D626"}, "freq": 1,
+  "signals": [
+    {"id": "508_MEAS_CURRENT_P_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of the electromagnetic valve for regulating the pressure in the oil pressure accumulator control system, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D650"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_INPUT_SHFT", "path": "Transmission", "fmt": { "len": 16, "max": 131070, "mul": 2, "unit": "rpm" }, "name": "Automatic transmission input shaft mode, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D651"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_INPUT_SHFT_MODE", "path": "Transmission", "fmt": { "len": 16, "max": 131070, "mul": 2, "unit": "rpm" }, "name": "Automatic transmission input shaft mode, calculated"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D652"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_OUTPUT", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Automatic transmission output shaft mode, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D653"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_OUTPUT_SHFT_MODE", "path": "Transmission", "fmt": { "len": 16, "max": 4186112, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Automatic transmission output shaft mode, calculated"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D654"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CONV_SLIP_SPD", "path": "Movement", "fmt": { "len": 8, "max": 8192, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Torque converter slip speed, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D655"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_TQ_CONV_SLIP_MODE", "path": "Transmission", "fmt": { "len": 8, "max": 8192, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Torque converter slip mode, theoretical value"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D670"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_EMERGENCY", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission in emergency mode"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D671"}, "freq": 1,
+  "signals": [
+    {"id": "508_FUGITIVE_TRIP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "FUGITIVE TRIP IN EMERGENCY MODE"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D672"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_CLU_RELEASE_ST_STOP", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Clutch release state at stop, creep speed reduction"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D673"}, "freq": 1,
+  "signals": [
+    {"id": "508_OP_MODE_USED", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Operating mode used by the automatic transmission"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D700"}, "freq": 1,
+  "signals": [
+    {"id": "508_POS_GEARSHIFT_LEVER", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Position of the gearshift lever"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D701"}, "freq": 1,
+  "signals": [
+    {"id": "508_SHIFT_LOCK_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Shift-lock control"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D703"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_START", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine start prohibition control, start lock"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D704"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_STAT_COMMANDS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "STATUS COMMANDS REGULATION OR LIMITATION SPEED"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D705"}, "freq": 1,
+  "signals": [
+    {"id": "508_REMOTE_WAKE_UP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Remote wake-up circuit status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D708"}, "freq": 1,
+  "signals": [
+    {"id": "508_REMOTE_WAKE_UP_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Remote wake-up state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D709"}, "freq": 1,
+  "signals": [
+    {"id": "508_ICE_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Combustion engine state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D70B"}, "freq": 1,
+  "signals": [
+    {"id": "508_AUTOMATIC_TRANS_PARK", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission in park position"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D70E"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_BRAKE_CIRCUIT_P", "path": "Control", "fmt": { "len": 16, "max": 6498, "min": -55, "div": 10, "add": -55, "unit": "bars" }, "name": "Brake circuit pressure"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D711"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_VSS_6A9", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D730"}, "freq": 1,
+  "signals": [
+    {"id": "508_ENG_STALLS",   "path": "Engine", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine stalls"},
+    {"id": "508_NUM_ENG_STOP", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of engine stop information deletion cycles"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D731"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_CLU_C1", "path": "Transmission", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Activation count, clutch protection C1"},
+    {"id": "508_NUM_ACTIVATIONS_CLU_C2", "path": "Transmission", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Activation count, clutch protection C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D742"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_C1", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D743"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_CLU_ELECTROMAGNETIC_VLV_C2", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, clutch electromagnetic valve C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D744"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_CLU_C3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, clutch electromagnetic valve C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D745"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_B1", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, brake electromagnetic valve B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D746"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_TQ", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, torque converter lockup electromagnetic valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D747"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_1", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D748"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_2", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D749"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74A"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74B"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_5", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 5"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74C"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_6", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 6"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74D"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements right"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74E"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_N", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements n"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D750"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ADDITIONAL_OIL", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, additional oil pump, ATN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D751"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_LINE_P_CTRL", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, line pressure control solenoid"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D752"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, shift solenoid SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D753"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID_ACTIVATIONS_SC3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, shift solenoid SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D754"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID_OPERATED_SC4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D755"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID_OPERATED_SC5", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated SC5"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D756"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID_OPERATED", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated automatic transmission lubrication control valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D757"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_SHIFT_SOLENOID_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated torque converter lock-up pressure regulating valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D758"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve for controlling the automatic transmission locking finger in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D759"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_C4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75A"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_B2", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of brake B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75B"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_ACTIVATIONS_GEAR_7", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, gear 7"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75C"}, "freq": 0.25,
+  "signals": [
+    {"id": "508_NUM_GEAR_ENGAGEMENTS_8", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 8"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75D"}, "freq": 1,
+  "signals": [
+    {"id": "508_NUM_ENGAGEMENTS_P_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of engagements of the electromagnetic valve for regulating the pressure in the oil pressure accumulator control system, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D801"}, "freq": 1,
+  "signals": [
+    {"id": "508_VEH_HOUR_METER", "path": "Engine", "fmt": { "len": 32, "max": 429496729, "div": 10, "unit": "seconds" }, "name": "Vehicle hour meter"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D802"}, "freq": 30,
+  "signals": [
+    {"id": "508_ODO_6A9", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "DADC"}, "freq": 1,
+  "signals": [
+    {"id": "508_ST_LOCK_UNLOCK_CTRL",     "path": "Engine", "fmt": {           "len": 8, "max": 255, "unit": "scalar" }, "name": "State lock/unlock control unit"},
+    {"id": "508_ANTI_START",              "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "scalar" }, "name": "ANTI START PROGRAMMING STATUS"},
+    {"id": "508_PROBLEMS_DETECTED_WHILE", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 255, "unit": "scalar" }, "name": "Problems detected while transmitting unlock code"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "DADD"}, "freq": 1,
+  "signals": [
+    {"id": "508_COMPUTER_LOCK", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Computer lock"}
+  ]}
 ]
 }
